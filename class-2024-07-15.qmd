@@ -1,26 +1,33 @@
 ---
-title: "class-2024-07-15"
+title: Race and Employment
 author: "Ashwika Katiyar"
 format: html
+execute: 
+  echo: false
 ---
 
-## Quarto
+Broad question: Does race affect employment?
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+Specific question: Is there a difference in callbacks for interviews between
+resumes with White-sounding names and African American-sounding names?
 
-## Running Code
+Preceptor table: 
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+Units: specific resumes 
+
+Outcome: callback/no callback
+
+Covariates: race, job being applied for, resume quality/work experience, city/location, gender
+
+Treatment: being assigned a White sounding or a Black sounding name
 
 ```{r}
-1 + 1
+#| message: false
+library(tidyverse)
 ```
-
-You can add options to executable code like this 
 
 ```{r}
-#| echo: false
-2 * 2
+resume <- read.csv("data/resume.csv")
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+
